@@ -10,15 +10,7 @@
     white-space: nowrap; /* Adjust animation duration and timing function */
     
   }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(100%); /* Move the track completely to the left */
-    }
-  }
+
   
   /* Additional styling for images or icons */
   .carousel-track img {
