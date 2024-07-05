@@ -146,7 +146,7 @@ function AppAppBar() {
                 variant="contained"
                 size="small"
                 component="a"
-                href="/material-ui/getting-started/templates/sign-up/"
+                href="https://share.hsforms.com/1uOdn7b8wR7yy4xUNUmEeLAqfs72"
                 target="_blank"
               >
                 Sign up
