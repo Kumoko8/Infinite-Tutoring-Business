@@ -1,13 +1,13 @@
 import { Element } from 'react-scroll'
+import { Routes, Route } from 'react-router-dom';
 import { Parallax } from 'react-parallax'
 import Section from '../src/components/Section'
-import Hero from '../src/components/Hero'
 import NavBar from '../src/components/NavBar'
-import Carousel from '../src/components/Carousel'
 import sections from '../src/components/modules/sections';
+import Terms from './views/Terms'
+import Home from './views/Home'
 
 import './App.css'
-import Features from './components/Features'
 
 function App() {
 
@@ -16,10 +16,12 @@ function App() {
       <NavBar />
       <Parallax bgImage='../src/assets/back5.webp' strength={700} bgImageStyle={{ objectFit: 'cover' }}>
 
-        <Hero />
-        <Carousel />
 
-        <Features />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/terms" element={<Terms />} />
+
+      </Routes>
       </Parallax>
     </div>
   );

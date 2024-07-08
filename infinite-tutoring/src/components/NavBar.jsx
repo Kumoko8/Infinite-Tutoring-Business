@@ -1,5 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
@@ -83,6 +84,8 @@ function AppAppBar() {
                 px: 0,
               }}
             >
+              <Link to="/">
+              
               <img
                 src={
                   '/src/assets/logo.jpg'
@@ -90,6 +93,7 @@ function AppAppBar() {
                 style={logoStyle}
                 alt="logo of infinite tutoring"
               />
+              </Link>
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <MenuItem
                   onClick={() => scrollToSection('features')}
