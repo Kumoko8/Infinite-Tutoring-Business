@@ -1,11 +1,12 @@
 import { Element } from 'react-scroll'
 import { Routes, Route } from 'react-router-dom';
 import { Parallax } from 'react-parallax'
-import Section from '../src/components/Section'
+
 import NavBar from '../src/components/NavBar'
-import sections from '../src/components/modules/sections';
+
 import Terms from './views/Terms'
 import Home from './views/Home'
+import backImage from "../src/assets/back5.webp";
 
 import './App.css'
 
@@ -14,7 +15,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Parallax bgImage='../src/assets/back5.webp' strength={700} bgImageStyle={{ objectFit: 'cover' }}>
+      <Parallax bgImage= {backImage} strength={700} bgImageStyle={{ objectFit: 'cover' }}>
 
 
       <Routes>

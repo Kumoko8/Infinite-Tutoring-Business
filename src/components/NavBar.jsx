@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
+import heroImage from "../assets/logo.jpg";
 
 const logoStyle = {
   width: '4rem',
@@ -29,7 +30,7 @@ function AppAppBar() {
 
   const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
-    const offset = 500;
+    const offset = 1000;
     if (sectionElement) {
       const targetScroll = sectionElement.offsetTop - offset;
       sectionElement.scrollIntoView({ behavior: 'smooth' });
@@ -88,7 +89,7 @@ function AppAppBar() {
               
               <img
                 src={
-                  '/src/assets/logo.jpg'
+                  heroImage
                 }
                 style={logoStyle}
                 alt="logo of infinite tutoring"
