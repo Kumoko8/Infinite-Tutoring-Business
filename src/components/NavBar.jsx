@@ -149,7 +149,7 @@ function AppAppBar() {
                 Sign up
               </Button>
             </Box>
-            <Box sx={{ display: { sm: '', md: 'none' } }}>
+            <Box sx={{ display: { md: 'none' } }}>
               <Button
                 variant="text"
                 color="primary"
@@ -197,7 +197,7 @@ function AppAppBar() {
                       color="primary"
                       variant="contained"
                       component="a"
-                      href="/material-ui/getting-started/templates/sign-up/"
+                      href="https://share.hsforms.com/1uOdn7b8wR7yy4xUNUmEeLAqfs72"
                       target="_blank"
                       sx={{ width: '100%' }}
                     >
