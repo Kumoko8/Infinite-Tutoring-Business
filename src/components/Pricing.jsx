@@ -25,8 +25,8 @@ const pricingOptions = [
 
 export default function Pricing() {
     return (
-        <Container id="pricing" sx={{ py: { xs: 8, sm: 16 } }}>
-            <Typography component="h2" variant="h4" color="text.primary" align="center" gutterBottom>
+        <Container  sx={{ py: { xs: 8, sm: 16 } }}>
+            <Typography id="pricing" component="h2" variant="h4" color="text.primary" align="center" gutterBottom>
                 Pricing
             </Typography>
             <Typography variant="body1" color="text.secondary" align="center" sx={{ mb: { xs: 2, sm: 4 } }}>

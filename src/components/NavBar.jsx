@@ -179,13 +179,10 @@ function AppAppBar() {
                   
                   </Box>
                   <MenuItem onClick={() => scrollToSection('features')}>
-                    Features
+                    About
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('testimonials')}>
                     Testimonials
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('highlights')}>
-                    Highlights
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('pricing')}>
                     Pricing

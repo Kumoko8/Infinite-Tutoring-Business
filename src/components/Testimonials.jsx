@@ -48,10 +48,10 @@ export default function Testimonials() {
     const selectedTestimonial = testimonials[selectedTestimonialIndex];
 
     return (
-        <Container id="testimonials" sx={{ py: { xs: 8, sm: 16 } }}>
+        <Container  sx={{ py: { xs: 8, sm: 16 } }}>
             <Grid container spacing={6}>
                 <Grid item xs={12} md={12}>
-                    <div>
+                    <div id="testimonials">
                         <Typography component="h2" variant="h4" color="text.primary">
                             Testimonials
                         </Typography>
