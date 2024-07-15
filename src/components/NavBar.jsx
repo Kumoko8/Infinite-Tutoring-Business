@@ -30,7 +30,7 @@ function AppAppBar() {
 
   const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
-    const offset = 1000;
+    const offset = 900;
     if (sectionElement) {
       const targetScroll = sectionElement.offsetTop - offset;
       sectionElement.scrollIntoView({ behavior: 'smooth' });

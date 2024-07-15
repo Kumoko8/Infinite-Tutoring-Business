@@ -56,7 +56,7 @@ export default function Pricing() {
                             <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
                                 {option.description}
                             </Typography>
-                            <Button variant="contained" color="primary">
+                            <Button variant="contained" color="primary" target="blank" href="https://meetings.hubspot.com/taylor-golden">
                                 Book Now
                             </Button>
                         </Card>
