@@ -67,8 +67,8 @@ export default function Hero() {
             sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
           >
           
-            <Button variant="contained" color="primary">
-              {/* make button go to sign up form and auto-populate email in form  */}
+            <Button href="https://share.hsforms.com/1WzGOknO5TPGrVEhr2LzRKQqfs72"variant="contained" color="primary">
+              
               Schedule a Session
             </Button>
           </Stack>
