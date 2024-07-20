@@ -23,24 +23,24 @@ const items = [
         title: 'Confidence Builders',
         description:
             "We capitalize and reinforce your child's strengths to master areas of improvement.",
-        imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
-        imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+        imageLight: 'url("/src/assets/demoForm.webp")',
+        imageDark: 'url("/src/assets/demoForm.webp")',
     },
     {
         icon: <AutoStoriesIcon />,
         title: 'Storytellers',
         description:
             'We teach content using characters and narrative to make it more memorable and engaging.',
-        imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-        imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+        imageLight: 'url("/src/assets/kumoTform.webp")',
+        imageDark: 'url("/src/assets/kumoTform.webp")',
     },
     {
         icon: <SwitchAccessShortcutAddIcon />,
         title: 'Skill Developers',
         description:
             'We connect and build on existing skills with new ones one at a time.',
-        imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-        imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+        imageLight: 'url("/src/assets/compForm.webp")',
+        imageDark: 'url("/src/assets/compForm.webp")',
     },
 ];
 
@@ -56,7 +56,7 @@ export default function Features() {
     return (
         <Container  sx={{ py: { xs: 8, sm: 16 } }}>
             <Grid container spacing={6}>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} sm={6} md={6}>
                     <div id="features">
                         <Typography component="h2" variant="h4" color="text.primary">
                             Who We Are
@@ -66,10 +66,10 @@ export default function Features() {
                             color="text.secondary"
                             sx={{ mb: { xs: 2, sm: 4 } }}
                         >
-                            Guided by evidence-based teaching techiques, and test curriculum development, we strive to always be:
+                            Guided by evidence-based teaching techiques, and experienced curriculum development, we strive to always be:
                         </Typography>
                     </div>
-                    <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
+                    <Grid container item gap={4} sx={{ display: { sm: 'none' }, justifyContent: 'center' }}>
                         {items.map(({ title }, index) => (
                             <Chip
                                 key={index}
@@ -100,7 +100,7 @@ export default function Features() {
                         component={Card}
                         variant="outlined"
                         sx={{
-                            display: { xs: 'auto', sm: 'none' },
+                            display: { sm:'none' },
                             mt: 4,
                         }}
                     >
@@ -110,9 +110,12 @@ export default function Features() {
                                     theme.palette.mode === 'light'
                                         ? items[selectedItemIndex].imageLight
                                         : items[selectedItemIndex].imageDark,
-                                backgroundSize: 'cover',
+                                backgroundSize: 'contain',
                                 backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
                                 minHeight: 280,
+                                width:'100%',
+                                height:'100%',
                             }}
                         />
                         <Box sx={{ px: 2, pb: 2 }}>
@@ -147,7 +150,7 @@ export default function Features() {
                         alignItems="flex-start"
                         spacing={2}
                         useFlexGap
-                        sx={{ width: '100%', display: { xs: 'none', sm: 'flex' } }}
+                        sx={{ width: '100%', display: { xs: 'none', sm:'flex'} }}
                     >
                         {items.map(({ icon, title, description }, index) => (
                             <Card
@@ -240,9 +243,9 @@ export default function Features() {
                 </Grid>
                 <Grid
                     item
-                    xs={12}
+                    sm={6}
                     md={6}
-                    sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%' }}
+                    sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%', }}
                 >
                     <Card
                         variant="outlined"
@@ -256,9 +259,11 @@ export default function Features() {
                         <Box
                             sx={{
                                 m: 'auto',
-                                width: 420,
-                                height: 500,
+                                width: '100%',
+                                height: '100%',
                                 backgroundSize: 'contain',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundPosition: 'center',
                                 backgroundImage: (theme) =>
                                     theme.palette.mode === 'light'
                                         ? items[selectedItemIndex].imageLight
