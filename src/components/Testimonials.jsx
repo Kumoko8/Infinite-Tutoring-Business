@@ -14,25 +14,25 @@ import FormatQuoteRoundedIcon from '@mui/icons-material/FormatQuoteRounded';
 const testimonials = [
     {
         icon: <FormatQuoteRoundedIcon />,
-        name: 'John Doe',
+        name: 'Cathy (Austin, TX)',
         testimonial:
-            "This service has transformed my child's learning experience. The personalized approach is outstanding!",
+            "Jack really looks forward to his classes with Taylor - and Taylor is so tuned into Jack - teaching him great concepts and skills! I highly recommend Taylor as a teacher - he's reliable and fun to work with.",
         imageLight: 'url("/static/images/testimonials/testimonial1-light.png")',
         imageDark: 'url("/static/images/testimonials/testimonial1-dark.png")',
     },
     {
         icon: <FormatQuoteRoundedIcon />,
-        name: 'Jane Smith',
+        name: 'David (Round Rock, TX)',
         testimonial:
-            'The storytelling method is highly engaging and helps my child remember concepts better.',
+            'Taylor is great at helping you towards specific goals and gearing those goals towards what you want rather than making you shape your goals around a curriculum.',
         imageLight: 'url("/static/images/testimonials/testimonial2-light.png")',
         imageDark: 'url("/static/images/testimonials/testimonial2-dark.png")',
     },
     {
         icon: <FormatQuoteRoundedIcon />,
-        name: 'Alice Johnson',
+        name: 'Mia (Omaha, NE)',
         testimonial:
-            'I have seen significant improvement in my child’s skills since we started using this service.',
+            'Wow, Taylor is such an amazing tutor, but an even better person. He truly cares about helping and guiding his students throughout the entire process. He always provided insightful feedback, and I will definitely be reaching out to him for any further assistance! 10/10 recommend!!!',
         imageLight: 'url("/static/images/testimonials/testimonial3-light.png")',
         imageDark: 'url("/static/images/testimonials/testimonial3-dark.png")',
     },
@@ -57,7 +57,7 @@ export default function Testimonials() {
                         </Typography>
                         <Typography
                             variant="body1"
-                            color="text.secondary"
+                            color="text.primary"
                             sx={{ mb: { xs: 2, sm: 4 } }}
                         >
                             Hear what parents are saying about our service:
@@ -75,7 +75,6 @@ export default function Testimonials() {
                         {testimonials.map(({ icon, name, testimonial }, index) => (
                             <Card
                                 key={index}
-                                component={Button}
                                 onClick={() => handleTestimonialClick(index)}
                                 sx={{
                                     p: 3,
@@ -130,14 +129,14 @@ export default function Testimonials() {
                                             {name}
                                         </Typography>
                                         <Typography
-                                            color="text.secondary"
+                                            color="text.primary"
                                             variant="body2"
                                             sx={{ my: 0.5 }}
                                         >
                                             {testimonial}
                                         </Typography>
                                         {/* Add the Read More button when we get more time to add more info */}
-                                        {/* <Button
+                                        <Button
                                             color="primary"
                                             variant="body2"
                                             fontWeight="bold"
@@ -156,7 +155,7 @@ export default function Testimonials() {
                                                 fontSize="small"
                                                 sx={{ mt: '1px', ml: '2px' }}
                                             />
-                                        </Button> */}
+                                        </Button>
                                     </div>
                                 </Box>
                             </Card>

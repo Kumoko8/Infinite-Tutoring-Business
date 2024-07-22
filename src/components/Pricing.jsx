@@ -29,7 +29,7 @@ export default function Pricing() {
             <Typography id="pricing" component="h2" variant="h4" color="text.primary" align="center" gutterBottom>
                 Pricing
             </Typography>
-            <Typography variant="body1" color="text.secondary" align="center" sx={{ mb: { xs: 2, sm: 4 } }}>
+            <Typography variant="body1" color="text.primary" align="center" sx={{ mb: { xs: 2, sm: 4 } }}>
                 Choose the option that best suits your needs:
             </Typography>
             <Grid container spacing={6} justifyContent="center">
@@ -53,7 +53,7 @@ export default function Pricing() {
                             <Typography variant="h4" color="text.primary" gutterBottom>
                                 {option.price}
                             </Typography>
-                            <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+                            <Typography variant="body1" color="text.primary" sx={{ mb: 2 }}>
                                 {option.description}
                             </Typography>
                             <Button variant="contained" color="primary" target="blank" href="https://meetings.hubspot.com/taylor-golden">
