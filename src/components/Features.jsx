@@ -9,13 +9,12 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
-import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
-import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
-import RecommendIcon from '@mui/icons-material/Recommend';
 import RecommendOutlinedIcon from '@mui/icons-material/RecommendOutlined';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import SwitchAccessShortcutAddIcon from '@mui/icons-material/SwitchAccessShortcutAdd';
+import demoImage from '../assets/demoForm.webp';
+import kumoImage from '../assets/kumoTForm.webp';
+import compImage from '../assets/compForm.webp';
 
 const items = [
     {
@@ -24,8 +23,7 @@ const items = [
         description:
             "We capitalize and reinforce your child's strengths to master areas of improvement.",
         learnMore: "Each student gets a personalized progress chart with skills unique to their strengths and areas of growth. Students can choose or create their own character that grows along with them as they gain more experience points. Not only does it build intrinsic motivation, but also allows students to visualize their growth. ",
-        imageLight: 'url("/src/assets/demoForm.webp")',
-        imageDark: 'url("/src/assets/demoForm.webp")',
+        imageLight: demoImage,
     },
     {
         icon: <AutoStoriesIcon />,
@@ -33,8 +31,7 @@ const items = [
         description:
             'We teach content using characters and narrative to make it more memorable and engaging.',
         learnMore: "Character narratives are formed organically depending on the content being taught. Students get the option of choosing one of Infinite Tutoring's original characters or creating their own. Students can choose colors, add gear, and watch them change as they master more skills! Once a character reaches its ultimate stage, students can choose another! ",
-        imageLight: 'url("/src/assets/kumoTform.webp")',
-        imageDark: 'url("/src/assets/kumoTform.webp")',
+        imageLight: kumoImage,
     },
     {
         icon: <SwitchAccessShortcutAddIcon />,
@@ -42,8 +39,7 @@ const items = [
         description:
             'We grow new skills by connecting them with previously mastered skills.',
         learnMore: "We believe that every complex concept is a combination of many simpler ones. We teach students to master the simpler building blocks, look for connections, and put them together one step at a time! We create and use our own original content, but also guide students through any existing content required of them!",
-        imageLight: 'url("/src/assets/compForm.webp")',
-        imageDark: 'url("/src/assets/compForm.webp")',
+        imageLight: compImage,
     },
 ];
 
@@ -86,6 +82,7 @@ export default function Features() {
                             Guided by evidence-based teaching techiques, and experienced curriculum development, we strive to always be:
                         </Typography>
                     </div>
+                    {/* For small screens */}
                     <Grid container item gap={4} sx={{ display: { sm: 'none' }, justifyContent: 'center' }}>
                         {items.map(({ title }, index) => (
                             <Chip
@@ -124,10 +121,7 @@ export default function Features() {
                     >
                         <Box
                             sx={{
-                                backgroundImage: (theme) =>
-                                    theme.palette.mode === 'light'
-                                        ? items[selectedItemIndex].imageLight
-                                        : items[selectedItemIndex].imageDark,
+                                backgroundImage: `url(${items[selectedItemIndex].imageLight})`,
                                 backgroundSize: 'contain',
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
@@ -167,7 +161,7 @@ export default function Features() {
                             </Link>
                             {
                                 showLearnMore && (
-                                    <Typography color="text.primary" variant="body2" sx={{ mt: 2 }}>
+                                    <Typography color="text.primary" variant="body1" sx={{ mt: 2 }}>
                                         {selectedFeature.learnMore}
                                     </Typography>
                                 )
@@ -267,7 +261,7 @@ export default function Features() {
                                             />
                                         </Link>
                                         {showLearnMoreArray[index] && (
-                                            <Typography color="text.primary" variant="body2" sx={{ mt: 2 }}>
+                                            <Typography color="text.primary" variant="body1" sx={{ mt: 2 }}>
                                                 {learnMore}
                                             </Typography>
                                         )}
@@ -302,10 +296,8 @@ export default function Features() {
                                 backgroundSize: 'contain',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundPosition: 'center',
-                                backgroundImage: (theme) =>
-                                    theme.palette.mode === 'light'
-                                        ? items[selectedItemIndex].imageLight
-                                        : items[selectedItemIndex].imageDark,
+                                backgroundImage:  `url(${items[selectedItemIndex].imageLight})`
+                                       
                             }}
                         />
                     </Card>
