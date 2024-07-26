@@ -2,13 +2,11 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
-import Chip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import RecommendIcon from '@mui/icons-material/Recommend';
 import FormatQuoteRoundedIcon from '@mui/icons-material/FormatQuoteRounded';
 
 const testimonials = [
@@ -19,6 +17,7 @@ const testimonials = [
             "Jack really looks forward to his classes with Taylor - and Taylor is so tuned into Jack - teaching him great concepts and skills! I highly recommend Taylor as a teacher - he's reliable and fun to work with.",
         imageLight: 'url("/static/images/testimonials/testimonial1-light.png")',
         imageDark: 'url("/static/images/testimonials/testimonial1-dark.png")',
+        additionalInfoText: "Cathy purchased drawing lessons as a gift for her grandson. Infinite tutoring taught him how to use basic 2D and 3D shapes in combination to draw complex organic and inorganic forms like cars and trees. "
     },
     {
         icon: <FormatQuoteRoundedIcon />,
@@ -27,6 +26,7 @@ const testimonials = [
             'Taylor is great at helping you towards specific goals and gearing those goals towards what you want rather than making you shape your goals around a curriculum.',
         imageLight: 'url("/static/images/testimonials/testimonial2-light.png")',
         imageDark: 'url("/static/images/testimonials/testimonial2-dark.png")',
+        additionalInfoText: "David wanted to improve his drawing skills to make storyboards for skits. Infinite Tutoring began by teaching him the basic concepts of art including line, shape, form, movement, perspective, color, and value among others. We then began applying them by drawing different characters in different poses. "
     },
     {
         icon: <FormatQuoteRoundedIcon />,
@@ -35,17 +35,24 @@ const testimonials = [
             'Wow, Taylor is such an amazing tutor, but an even better person. He truly cares about helping and guiding his students throughout the entire process. He always provided insightful feedback, and I will definitely be reaching out to him for any further assistance! 10/10 recommend!!!',
         imageLight: 'url("/static/images/testimonials/testimonial3-light.png")',
         imageDark: 'url("/static/images/testimonials/testimonial3-dark.png")',
+        additionalInfoText: "Mia wanted to adapt her book into a school curriculum. Infinite Tutoring helped edit and improve the middle/high school lesson plans she had by giving them structure, more aligned content, and connecting them to ELA standards. We also mapped out the flow and timetable of each lesson plan, and created student exemplars."
     },
 ];
 
 export default function Testimonials() {
     const [selectedTestimonialIndex, setSelectedTestimonialIndex] = React.useState(0);
+    const [expandedTestimonialIndex, setExpandedTestimonialIndex] = React.useState(null);
 
     const handleTestimonialClick = (index) => {
         setSelectedTestimonialIndex(index);
     };
 
+    const handleReadMoreClick = (index) => {
+        setExpandedTestimonialIndex(expandedTestimonialIndex === index ? null : index);
+    };
+
     const selectedTestimonial = testimonials[selectedTestimonialIndex];
+    const expandedTestimonial = testimonials[expandedTestimonialIndex];
 
     return (
         <Container  sx={{ py: { xs: 8, sm: 16 } }}>
@@ -148,6 +155,7 @@ export default function Testimonials() {
                                             }}
                                             onClick={(event) => {
                                                 event.stopPropagation();
+                                                handleReadMoreClick(index);
                                             }}
                                         >
                                             <span>Read more</span>
@@ -156,6 +164,13 @@ export default function Testimonials() {
                                                 sx={{ mt: '1px', ml: '2px' }}
                                             />
                                         </Button>
+                                        {expandedTestimonialIndex === index && (
+                                            <Box sx={{ mt: 2, p: 2, border: '1px solid', borderColor: 'grey.300' }}>
+                                                <Typography variant="body2" color="text.primary" sx={{ mt: 1 }}>
+                                                    {expandedTestimonial.additionalInfoText}
+                                                </Typography>
+                                            </Box>
+                                        )}
                                     </div>
                                 </Box>
                             </Card>
