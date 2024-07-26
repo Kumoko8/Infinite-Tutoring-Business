@@ -13,7 +13,7 @@ import RecommendOutlinedIcon from '@mui/icons-material/RecommendOutlined';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import SwitchAccessShortcutAddIcon from '@mui/icons-material/SwitchAccessShortcutAdd';
 import demoImage from '../assets/demoForm.webp';
-import kumoImage from '../assets/kumoTForm.webp';
+import kumoImage from '../assets/kumoTform.webp';
 import compImage from '../assets/compForm.webp';
 
 const items = [
