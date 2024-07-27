@@ -59,7 +59,7 @@ export default function Testimonials() {
             <Grid container spacing={6}>
                 <Grid item xs={12} md={12}>
                     <div id="testimonials">
-                        <Typography component="h2" variant="h4" color="text.primary">
+                        <Typography component="h2" variant="h4" color="white" fontFamily='Work Sans, Roboto, sans-serif'>
                             Testimonials
                         </Typography>
                         <Typography

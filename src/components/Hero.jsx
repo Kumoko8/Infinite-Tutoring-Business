@@ -16,7 +16,7 @@ export default function Hero() {
         width: '100%',
         backgroundImage:
           theme.palette.mode === 'light'
-            ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
+            ? 'linear-gradient(180deg, #ffee58, #FFF)'
             : 'linear-gradient(#02294F, #090E10)',
         backgroundSize: '100% 100%',
         backgroundRepeat: 'no-repeat',
@@ -40,6 +40,8 @@ export default function Hero() {
               flexDirection: { xs: 'column', md: 'row' },
               alignSelf: 'center',
               textAlign: 'center',
+              fontFamily: 'Work Sans, Roboto, sans-serif',
+              color: '#ffee33'
             }}
           >
 
@@ -47,8 +49,9 @@ export default function Hero() {
               component="span"
               variant="h1"
               sx={{
-                color: (theme) =>
-                  theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
+                color:'rgb(255, 0, 181)',
+                fontFamily: 'Work Sans, Roboto, sans-serif',
+                fontWeight: 600,
               }}
             >
               {/* change font here */}

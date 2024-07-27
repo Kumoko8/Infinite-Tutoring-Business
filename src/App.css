@@ -10,3 +10,10 @@
 .read-the-docs {
   color: #888;
 }
+
+@font-face {
+  font-family: 'Work Sans' ;
+  src: url('/src/assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

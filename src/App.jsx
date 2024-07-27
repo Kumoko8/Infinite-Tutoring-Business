@@ -6,7 +6,7 @@ import NavBar from '../src/components/NavBar'
 
 import Terms from './views/Terms'
 import Home from './views/Home'
-import backImage from "../src/assets/back5.webp";
+import backImage from "../src/assets/backg.webp";
 
 import './App.css'
 
