@@ -1,59 +1,47 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSpring, animated } from '@react-spring/web';
 import './Carousel.css'; // Import CSS file for styling
-import heroImage from "../assets/logo.jpg";
-import { useSpring, animated } from '@react-spring/web'
+import heroImage from '../assets/logo.jpg';
+import kumo from '../assets/kumoTform.webp';
 
 const Carousel = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [index, setIndex] = useState(0);
+  const images = [heroImage, kumo]; // Array of image paths
 
   useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      clearInterval(interval);
     };
-  }, []);
-
-
+  }, [images.length]);
 
   const springs = useSpring({
-    from: { x: 0 },
-    to: { x: screenWidth },
-    loop: true , // Enable looping with reverse behavior
-    config: { duration: 15000 },
-    onRest: () => {
-      // Reset the animation when it reaches the end
-      springs.start({ x: 0 });
-    }
-  })
-  return (
-    
+    opacity: 1,
+    transform: 'translateX(0%)',
+    from: { opacity: 0, transform: 'translateX(-100%)' },
+    reset: true,
+    config: { duration: 1000 },
+  });
 
+  return (
     <div className="carousel-container">
-      <animated.div style={{
-        width: '10rem',
-        height: '10rem',
-        borderRadius: 8,
-        ...springs
-      }}>
+      <animated.div style={{ ...springs }}>
         <img
-          src={heroImage} // Replace with the path to your image
-          alt="Image"
+          src={images[index]}
+          alt={`Slide ${index}`}
           style={{
-            width: 'auto', // Adjust width as needed
-            height: '100%', // Adjust height as needed
-            borderRadius: '8px', // Adjust border radius as needed
+            width: '100%',
+            height: 'auto',
+            borderRadius: '8px',
           }}
         />
-        </animated.div >
-     
+      </animated.div>
     </div>
   );
 };
 
 export default Carousel;
+

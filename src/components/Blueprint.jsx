@@ -21,7 +21,7 @@ const items = [
         icon: <RecommendOutlinedIcon />,
         title: 'Build Confidence',
         description:
-            "We capitalize and reinforce your child's strengths to master areas of improvement",
+            "Capitalize and reinforce your child's strengths to master areas of improvement",
         learnMore: "Each student gets a personalized progress chart with skills unique to their strengths and areas of growth. Students can choose or create their own character that grows along with them as they gain more experience points. Not only does it build intrinsic motivation, but also allows students to visualize their growth. ",
         imageLight: demoImage,
     },
@@ -29,7 +29,7 @@ const items = [
         icon: <AutoStoriesIcon />,
         title: 'Craft a Narrative',
         description:
-            'We teach content using characters and narrative to make it more memorable and engaging',
+            'Characters and narrative to make learning more memorable and engaging',
         learnMore: "Character narratives are formed organically depending on the content being taught. Students get the option of choosing one of Infinite Tutoring's original characters or creating their own. Students can choose colors, add gear, and watch them change as they master more skills! Once a character reaches its ultimate stage, students can choose another! ",
         imageLight: kumoImage,
     },
@@ -37,13 +37,13 @@ const items = [
         icon: <SwitchAccessShortcutAddIcon />,
         title: 'Develop Skills',
         description:
-            'We grow new skills by connecting them with previously mastered skills',
+            'Grow new skills by connecting them with previously mastered skills',
         learnMore: "We believe that every complex concept is a combination of many simpler ones. We teach students to master the simpler building blocks, look for connections, and put them together one step at a time! We create and use our own original content, but also guide students through any existing content required of them!",
         imageLight: compImage,
     },
 ];
 
-export default function Features() {
+export default function Blueprint() {
     const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
     const [showLearnMore, setShowLearnMore] = React.useState(false);
     const [showLearnMoreArray, setShowLearnMoreArray] = React.useState(items.map(() => false));
@@ -106,7 +106,7 @@ export default function Features() {
                             color="text.primary"
                             sx={{ mb: { xs: 2, sm: 4 } }}
                         >
-                            Guided by evidence-based teaching techiques, refined curriculum development, and 7 years of teaching experience, we strive to always be:
+                            Guided by evidence-based teaching techiques, refined curriculum development, and 7 years of teaching experience, students can expect to:
                         </Typography>
                     </div>
                     {/* For small screens */}
