@@ -177,8 +177,8 @@ We may update our Privacy Statement from time to time. We will notify you of any
 
 If you have any questions about this Privacy Statement, please contact us:
 
-- Email: privacy@infinitetutoring.com
-- Address: Infinite Tutoring, 123 Learning Lane, Education City, EC 12345
+- Email: tauen8@gmail.com
+
 
 </p>
 

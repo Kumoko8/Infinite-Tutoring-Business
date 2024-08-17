@@ -19,7 +19,7 @@ import compImage from '../assets/compForm.webp';
 const items = [
     {
         icon: <RecommendOutlinedIcon />,
-        title: 'Confidence Builders',
+        title: 'Build Confidence',
         description:
             "We capitalize and reinforce your child's strengths to master areas of improvement",
         learnMore: "Each student gets a personalized progress chart with skills unique to their strengths and areas of growth. Students can choose or create their own character that grows along with them as they gain more experience points. Not only does it build intrinsic motivation, but also allows students to visualize their growth. ",
@@ -27,7 +27,7 @@ const items = [
     },
     {
         icon: <AutoStoriesIcon />,
-        title: 'Storytellers',
+        title: 'Craft a Narrative',
         description:
             'We teach content using characters and narrative to make it more memorable and engaging',
         learnMore: "Character narratives are formed organically depending on the content being taught. Students get the option of choosing one of Infinite Tutoring's original characters or creating their own. Students can choose colors, add gear, and watch them change as they master more skills! Once a character reaches its ultimate stage, students can choose another! ",
@@ -35,7 +35,7 @@ const items = [
     },
     {
         icon: <SwitchAccessShortcutAddIcon />,
-        title: 'Skill Developers',
+        title: 'Develop Skills',
         description:
             'We grow new skills by connecting them with previously mastered skills',
         learnMore: "We believe that every complex concept is a combination of many simpler ones. We teach students to master the simpler building blocks, look for connections, and put them together one step at a time! We create and use our own original content, but also guide students through any existing content required of them!",
@@ -68,18 +68,45 @@ export default function Features() {
 
     return (
         <Container sx={{ py: { xs: 8, sm: 16 } }}>
+            <Stack spacing={1} sx={{ mb: 10 }}>
+                <Typography
+                    fontSize="5em"
+                    color="white"
+                    fontFamily="Work Sans, Roboto, sans-serif"
+                    textAlign="center"
+                >
+                    Your Adventure
+                </Typography>
+                <Typography
+                    fontSize="5em"
+                    color="white"
+                    fontFamily="Work Sans, Roboto, sans-serif"
+                    textAlign="center"
+                >
+                    Your Skills
+                </Typography>
+                <Typography
+                    fontSize="5em"
+                    color="white"
+                    fontFamily="Work Sans, Roboto, sans-serif"
+                    textAlign="center"
+                >
+                    Your Success
+                </Typography>
+            </Stack>
             <Grid container spacing={6}>
                 <Grid item xs={12} sm={6} md={6}>
-                    <div id="features">
-                        <Typography component="h2" variant="h4" color='white' fontFamily='Work Sans, Roboto, sans-serif'>
-                            Who We Are
+                    <div id="blueprint">
+                        <Typography component="h2" variant="h4" color="white" fontFamily='Work Sans, Roboto, sans-serif'>
+                            Success Blueprint
                         </Typography>
+
                         <Typography
                             variant="body1"
                             color="text.primary"
                             sx={{ mb: { xs: 2, sm: 4 } }}
                         >
-                            Guided by evidence-based teaching techiques, refined curriculum development, and 8 years of teaching experience, we strive to always be:
+                            Guided by evidence-based teaching techiques, refined curriculum development, and 7 years of teaching experience, we strive to always be:
                         </Typography>
                     </div>
                     {/* For small screens */}
@@ -235,7 +262,7 @@ export default function Features() {
                                         <Typography
                                             color="text.primary"
                                             variant="body2"
-                                            sx={{ my: 0.5 , textTransform: 'lowercase'}}
+                                            sx={{ my: 0.5, textTransform: 'lowercase' }}
                                         >
                                             {description}
                                         </Typography>
@@ -296,8 +323,8 @@ export default function Features() {
                                 backgroundSize: 'contain',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundPosition: 'center',
-                                backgroundImage:  `url(${items[selectedItemIndex].imageLight})`
-                                       
+                                backgroundImage: `url(${items[selectedItemIndex].imageLight})`
+
                             }}
                         />
                     </Card>

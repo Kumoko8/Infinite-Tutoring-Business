@@ -96,8 +96,16 @@ function AppAppBar() {
               />
               </Link>
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+              <MenuItem
+                  onClick={() => scrollToSection('blueprint')}
+                  sx={{ py: '6px', px: '12px' }}
+                >
+                  <Typography variant="body2" color="text.primary">
+                    Blueprint
+                  </Typography>
+                </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection('features')}
+                  onClick={() => scrollToSection('about')}
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
@@ -179,7 +187,10 @@ function AppAppBar() {
                   >
                   
                   </Box>
-                  <MenuItem onClick={() => scrollToSection('features')}>
+                  <MenuItem onClick={() => scrollToSection('blueprint')}>
+                    Blueprint
+                  </MenuItem>
+                  <MenuItem onClick={() => scrollToSection('about')}>
                     About
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('testimonials')}>
@@ -188,7 +199,6 @@ function AppAppBar() {
                   <MenuItem onClick={() => scrollToSection('pricing')}>
                     Pricing
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
                   <Divider />
                   <MenuItem>
                     <Button

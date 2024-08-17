@@ -5,6 +5,7 @@ import { Parallax } from 'react-parallax'
 import NavBar from '../src/components/NavBar'
 
 import Terms from './views/Terms'
+import AboutMe from './components/AboutMe'
 import Home from './views/Home'
 import backImage from "../src/assets/backg.webp";
 
@@ -15,14 +16,15 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Parallax bgImage= {backImage} strength={700} bgImageStyle={{ objectFit: 'cover' }}>
+      <Parallax bgImage={backImage} strength={700} bgImageStyle={{ objectFit: 'cover' }}>
 
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/terms" element={<Terms />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/terms" element={<Terms />} />
+         
 
-      </Routes>
+        </Routes>
       </Parallax>
     </div>
   );

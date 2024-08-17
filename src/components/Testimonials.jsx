@@ -8,6 +8,8 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import FormatQuoteRoundedIcon from '@mui/icons-material/FormatQuoteRounded';
+import Link from '@mui/material/Link';
+
 
 const testimonials = [
     {
@@ -178,6 +180,7 @@ export default function Testimonials() {
                     </Stack>
                 </Grid>
             </Grid>
+            
         </Container>
     );
 }
