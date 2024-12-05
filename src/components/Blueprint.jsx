@@ -161,7 +161,7 @@ export default function Blueprint() {
                             <Typography color="white" variant="body2" fontWeight="bold">
                                 {selectedFeature.title}
                             </Typography>
-                            <Typography color="text.primary" variant="body2" sx={{ my: 0.5 }}>
+                            <Typography color="text.primary" variant="body2" sx={{ my: 0.5}}>
                                 {selectedFeature.description}
                             </Typography>
                             <Link
@@ -288,7 +288,7 @@ export default function Blueprint() {
                                             />
                                         </Link>
                                         {showLearnMoreArray[index] && (
-                                            <Typography color="text.primary" variant="body3" sx={{ mt: 2 }}>
+                                            <Typography color="text.primary" variant="body3" sx={{ mt: 2, textTransform: 'lowercase' }}>
                                                 {learnMore}
                                             </Typography>
                                         )}
