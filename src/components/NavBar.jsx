@@ -129,14 +129,6 @@ function AppAppBar() {
                     Pricing
                   </Typography>
                 </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('faq')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    FAQ
-                  </Typography>
-                </MenuItem>
               </Box>
             </Box>
             <Box

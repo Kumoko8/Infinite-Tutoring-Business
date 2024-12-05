@@ -1,6 +1,6 @@
 import Section from '../components/Section'
 import Hero from '../components/Hero'
-import Carousel from '../components/Carousel'
+import Gallery from '../components/Gallery'
 import Blueprint from '../components/Blueprint'
 import AboutMe from '../components/AboutMe'
 import Testimonials from '../components/Testimonials';
@@ -15,7 +15,7 @@ function Home() {
         <div>
 
             <Hero />
-            <Carousel />
+            <Gallery />
             <Blueprint />
             <AboutMe />
             <Testimonials />
