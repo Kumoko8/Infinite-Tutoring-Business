@@ -12,34 +12,36 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import RecommendOutlinedIcon from '@mui/icons-material/RecommendOutlined';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import SwitchAccessShortcutAddIcon from '@mui/icons-material/SwitchAccessShortcutAdd';
-import demoImage from '../assets/demoForm.webp';
-import kumoImage from '../assets/kumoTform.webp';
-import compImage from '../assets/compForm.webp';
+import ChooseCharacter from '../assets/Choose_Character.png';
+import DevelopSkills from '../assets/Develop_Skills.png';
+import BuildConfidence from '../assets/Build_Confidence.png';
+
 
 const items = [
-    {
-        icon: <RecommendOutlinedIcon />,
-        title: 'Build Confidence',
-        description:
-            "Capitalize and reinforce your child's strengths to master areas of improvement",
-        learnMore: "Each student gets a personalized progress chart with skills unique to their strengths and areas of growth. Students can choose or create their own character that grows along with them as they gain more experience points. Not only does it build intrinsic motivation, but also allows students to visualize their growth. ",
-        imageLight: demoImage,
-    },
+
     {
         icon: <AutoStoriesIcon />,
-        title: 'Craft a Narrative',
+        title: 'Choose Your Character',
         description:
-            'Characters and narrative to make learning more memorable and engaging',
-        learnMore: "Character narratives are formed organically depending on the content being taught. Students get the option of choosing one of Infinite Tutoring's original characters or creating their own. Students can choose colors, add gear, and watch them change as they master more skills! Once a character reaches its ultimate stage, students can choose another! ",
-        imageLight: kumoImage,
+            'Stories make learning more memorable and engaging',
+        learnMore: "Take ownership of your learning and choose from our team of original characters; watch them grow as you develop your skills! ",
+        imageLight: ChooseCharacter,
     },
     {
         icon: <SwitchAccessShortcutAddIcon />,
         title: 'Develop Skills',
         description:
             'Grow new skills by connecting them with previously mastered skills',
-        learnMore: "We believe that every complex concept is a combination of many simpler ones. We teach students to master the simpler building blocks, look for connections, and put them together one step at a time! We create and use our own original content, but also guide students through any existing content required of them!",
-        imageLight: compImage,
+        learnMore: "My curriculum is aligned with TEKS/Common Core, but executed in a creative and enaging way with original material. I believe that every complex concept is a combination of many simpler ones. I teach students to master the components, look for connections, and create solutions!",
+        imageLight: DevelopSkills,
+    },
+    {
+        icon: <RecommendOutlinedIcon />,
+        title: 'Build Confidence',
+        description:
+            "Capitalize and reinforce your child's strengths to master areas of improvement",
+        learnMore: "As students master more skills they gain more experience points for their character and uncover more of their individual journey. All of their progress is captured in a personalized format that inspires more growth. ",
+        imageLight: BuildConfidence,
     },
 ];
 
@@ -68,37 +70,12 @@ export default function Blueprint() {
 
     return (
         <Container sx={{ py: { xs: 8, sm: 16 } }}>
-            <Stack spacing={1} sx={{ mb: 10 }}>
-                <Typography
-                    fontSize="5em"
-                    color="white"
-                    fontFamily="Work Sans, Roboto, sans-serif"
-                    textAlign="center"
-                >
-                    Your Adventure
-                </Typography>
-                <Typography
-                    fontSize="5em"
-                    color="white"
-                    fontFamily="Work Sans, Roboto, sans-serif"
-                    textAlign="center"
-                >
-                    Your Skills
-                </Typography>
-                <Typography
-                    fontSize="5em"
-                    color="white"
-                    fontFamily="Work Sans, Roboto, sans-serif"
-                    textAlign="center"
-                >
-                    Your Success
-                </Typography>
-            </Stack>
+
             <Grid container spacing={6}>
                 <Grid item xs={12} sm={6} md={6}>
                     <div id="blueprint">
                         <Typography component="h2" variant="h4" color="white" fontFamily='Work Sans, Roboto, sans-serif'>
-                            Success Blueprint
+                           How I Teach
                         </Typography>
 
                         <Typography
@@ -106,7 +83,7 @@ export default function Blueprint() {
                             color="text.primary"
                             sx={{ mb: { xs: 2, sm: 4 } }}
                         >
-                            Guided by evidence-based teaching techiques, refined curriculum development, and 7 years of teaching experience, students can expect to:
+                            Guided by evidence-based teaching techiques, refined curriculum development, and 7 years of teaching experience
                         </Typography>
                     </div>
                     {/* For small screens */}
@@ -161,7 +138,7 @@ export default function Blueprint() {
                             <Typography color="white" variant="body2" fontWeight="bold">
                                 {selectedFeature.title}
                             </Typography>
-                            <Typography color="text.primary" variant="body2" sx={{ my: 0.5}}>
+                            <Typography color="text.primary" variant="body2" sx={{ my: 0.5 }}>
                                 {selectedFeature.description}
                             </Typography>
                             <Link

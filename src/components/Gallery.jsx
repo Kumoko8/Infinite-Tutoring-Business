@@ -1,12 +1,11 @@
 import React from 'react';
 import './Gallery.css'; // Import CSS file for styling
-import Draw from "../assets/drawing-preview.jpg";
-import Math from '../assets/math-preview.jpg';
-import Science from '../assets/sci-preview.jpg';
-import Site from '../assets/site-preview.jpg';
-import draw from '../assets/draw.png';
+import Draw from "../assets/Drawing_Tile.jpg";
+import Math from '../assets/Math_Tile.jpg';
+import Science from '../assets/Science_Tile.jpg';
 
-const images = [Math, Draw, Science, Site /* add more images here */];
+
+const images = [Math, Draw, Science ];
 
 const Gallery = () => {
   return (
