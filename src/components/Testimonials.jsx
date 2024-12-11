@@ -57,7 +57,7 @@ export default function Testimonials() {
     const expandedTestimonial = testimonials[expandedTestimonialIndex];
 
     return (
-        <Container  sx={{ py: { xs: 8, sm: 16 } }}>
+        <Container  sx={{ py: { xs: 8, sm: 16 }, maxWidth: '85%' }}>
             <Grid container spacing={6}>
                 <Grid item xs={12} md={12}>
                     <div id="testimonials">
